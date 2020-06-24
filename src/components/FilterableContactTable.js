@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import ContactTable from './ContactTable';
 import AddContactModal from './AddContactModal';
 
-import {Container, Row, Col, Button, Modal, Form} from 'react-bootstrap';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 
 import '../css/FilterableContactTable.css';
 
