@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/onetech-react/precache-manifest.4cdf39c828c25a87435d187b7b5d0ae3.js"
+  "/onetech-react/precache-manifest.82393b8f0a358f50b08ba6d6dab55cc8.js"
 );
 
 self.addEventListener('message', (event) => {

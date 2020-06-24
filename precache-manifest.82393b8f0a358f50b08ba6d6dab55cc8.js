@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "151c7956bec0db24e05c2d61af26f7db",
+    "revision": "e66f288d331108be17257884da3d34e1",
     "url": "/onetech-react/index.html"
   },
   {
-    "revision": "230c285c22444e68b2d8",
-    "url": "/onetech-react/static/css/main.a8a603d8.chunk.css"
+    "revision": "f24b5ccbe64e7409df3c",
+    "url": "/onetech-react/static/css/main.617e8dd3.chunk.css"
   },
   {
     "revision": "5ba38e0256a55fd43dc6",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/onetech-react/static/js/2.40d2873f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "230c285c22444e68b2d8",
+    "revision": "f24b5ccbe64e7409df3c",
     "url": "/onetech-react/static/js/main.5369a2d1.chunk.js"
   },
   {

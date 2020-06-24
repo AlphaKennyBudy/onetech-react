@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/onetech-react/static/css/main.a8a603d8.chunk.css",
+    "main.css": "/onetech-react/static/css/main.617e8dd3.chunk.css",
     "main.js": "/onetech-react/static/js/main.5369a2d1.chunk.js",
     "main.js.map": "/onetech-react/static/js/main.5369a2d1.chunk.js.map",
     "runtime-main.js": "/onetech-react/static/js/runtime-main.9237b468.js",
@@ -8,15 +8,15 @@
     "static/js/2.40d2873f.chunk.js": "/onetech-react/static/js/2.40d2873f.chunk.js",
     "static/js/2.40d2873f.chunk.js.map": "/onetech-react/static/js/2.40d2873f.chunk.js.map",
     "index.html": "/onetech-react/index.html",
-    "precache-manifest.4cdf39c828c25a87435d187b7b5d0ae3.js": "/onetech-react/precache-manifest.4cdf39c828c25a87435d187b7b5d0ae3.js",
+    "precache-manifest.82393b8f0a358f50b08ba6d6dab55cc8.js": "/onetech-react/precache-manifest.82393b8f0a358f50b08ba6d6dab55cc8.js",
     "service-worker.js": "/onetech-react/service-worker.js",
-    "static/css/main.a8a603d8.chunk.css.map": "/onetech-react/static/css/main.a8a603d8.chunk.css.map",
+    "static/css/main.617e8dd3.chunk.css.map": "/onetech-react/static/css/main.617e8dd3.chunk.css.map",
     "static/js/2.40d2873f.chunk.js.LICENSE.txt": "/onetech-react/static/js/2.40d2873f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9237b468.js",
     "static/js/2.40d2873f.chunk.js",
-    "static/css/main.a8a603d8.chunk.css",
+    "static/css/main.617e8dd3.chunk.css",
     "static/js/main.5369a2d1.chunk.js"
   ]
 }
