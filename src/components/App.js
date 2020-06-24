@@ -4,8 +4,10 @@ import '../css/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <FilterableContactTable users={users}/>
+    <div className="wrapper">
+      <div className="App">
+        <FilterableContactTable users={users}/>
+      </div>
     </div>
   );
 }

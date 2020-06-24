@@ -1,0 +1,22 @@
+.ProfileImage {
+    width: 100px;
+    height: 100px;
+}
+
+.ProfileName {
+    color: #FEA04F;
+}
+
+.ProfilePhone {
+    color: white;
+}
+
+.ContactRow {
+    margin-bottom: 5px;
+}
+
+.RemoveButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

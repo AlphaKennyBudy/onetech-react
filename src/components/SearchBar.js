@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+import {Form} from 'react-bootstrap';
+
+import '../css/SearchBar.css';
 class SearchBar extends Component {
     constructor(props) {
       super(props);
@@ -13,7 +16,7 @@ class SearchBar extends Component {
     render() {
       const filterText = this.props.filterText;
       return (
-        <input type="text" placeholder="Search contacts" value={filterText} onChange={this.handleFilterTextChange}/>
+        <Form.Control type="text" className="SearchBar" placeholder="Search contacts" value={filterText} onChange={this.handleFilterTextChange}/>
       );
     }
   }
