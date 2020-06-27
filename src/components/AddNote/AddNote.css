@@ -19,3 +19,8 @@
   padding: 1px;
   float: right;
 }
+
+.AddNote__TextArea:focus,
+.AddNote__TextArea {
+  outline: none;
+}
