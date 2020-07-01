@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./MainPage.css";
@@ -10,9 +10,28 @@ import ContactPage from "../ContactPage/ContactPage";
 import ModeContext from "../../contexts/ModeContext";
 import LangContext from "../../contexts/LangContext";
 
+import Modes from "../../styles/modes.json";
+
 function MainPage() {
   const [mode, setMode] = useState(true);
   const [lang, setLang] = useState(true);
+
+  const changeMode = () => {
+    let Mode;
+    if (mode) {
+      Mode = Modes.dark;
+    } else {
+      Mode = Modes.light;
+    }
+
+    for (let [key, value] of Object.entries(Mode)) {
+      document.documentElement.style.setProperty(key, value);
+    }
+  };
+
+  useEffect(() => {
+    changeMode();
+  }, [mode]);
 
   return (
     <Router>

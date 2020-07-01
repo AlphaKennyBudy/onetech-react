@@ -86,7 +86,7 @@ function CVBoilerplate() {
 
         <section>
           <div className="sectionTitle">
-            <h1>Key Skills</h1>
+            <h1>{ctx.skills}</h1>
           </div>
 
           <div className="sectionContent">

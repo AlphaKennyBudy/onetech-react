@@ -1,0 +1,14 @@
+{
+    "dark": {
+        "--bg-color-primary": "#21212a",
+        "--bg-color-secondary": "#353740",
+        "--font-color-primary": "#fff",
+        "--font-color-secondary": "#fea04f"
+    },
+    "light": {
+        "--bg-color-primary": "#bfaeae",
+        "--bg-color-secondary": "#f3f3f3",
+        "--font-color-primary": "#000",
+        "--font-color-secondary": "#cf8a05"
+    }
+}

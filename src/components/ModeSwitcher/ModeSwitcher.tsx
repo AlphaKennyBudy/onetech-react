@@ -5,6 +5,7 @@ import useMode from "../../hooks/useMode";
 
 function ModeSwitcher() {
   const { mode, setMode } = useMode()!;
+
   return (
     <div className="ModeSwitcher__wrapper">
       <input
@@ -12,7 +13,9 @@ function ModeSwitcher() {
         name="ModeSwitcher"
         id="ModeSwitcher"
         checked={mode}
-        onChange={() => setMode(!mode)}
+        onChange={() => {
+          setMode(!mode);
+        }}
       />
       <label htmlFor="ModeSwitcher" className="ModeSwitcher__label">
         <span role="img" className="fa-sun">
