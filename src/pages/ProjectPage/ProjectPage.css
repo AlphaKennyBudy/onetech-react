@@ -1,0 +1,20 @@
+.ProjectPage {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: stretch; */
+}
+
+.ProjectFrame {
+  display: block;
+  height: 100vh;
+  scale: 0.7;
+}
+
+.ProjectTitle {
+  margin-top: 10px;
+  align-self: center;
+}
