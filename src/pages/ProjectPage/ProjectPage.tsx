@@ -14,7 +14,7 @@ function ProjectPage() {
       <h1 className="ProjectTitle">Task 3 - Notes</h1>
       <iframe
         className="ProjectFrame"
-        src="https://onetech-react.alphakennybudy.vercel.app/"
+        src="https://onetech-react-8d40d8zp7.vercel.app/"
         title="Task 3 - Notes"
       ></iframe>
     </div>
