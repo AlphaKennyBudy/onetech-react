@@ -1,0 +1,31 @@
+{
+    "navbar": {
+        "contacts": "Контакты",
+        "projects": "Проекты"
+    },
+    "cv": {
+        "name": "Адиль",
+        "surname": "Ахметов",
+        "age": 20,
+        "job": "Фронт-Энд разработчик",
+        "emailValue": "devAdilAkhmetov@gmail.com",
+        "websiteValue": "alphakennybudy.github.io",
+        "mobileValue": "+ 7 700 996 40 89",
+        "email": "э-почта",
+        "website": "вебсайт",
+        "mobile": "телефон",
+        "info": "Персональная информация",
+        "workExp": "Опыт работы",
+        "jobTitleAtCompany": "Фронт-Энд разработчик (Стажер)",
+        "jobDate": "Июнь 20 - Настоящее время",
+        "skills": "Важные навыки",
+        "skillsValue": [
+            "Лежание на кровати",
+            "Чтение манги",
+            "Просмотр аниме"
+        ],
+        "education": "Образование",
+        "university": "Университет им. Сулеймана Демиреля",
+        "qualification": "Информационные Системы"
+    }
+}

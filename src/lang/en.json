@@ -1,0 +1,31 @@
+{
+    "navbar": {
+        "contacts": "Contacts",
+        "projects": "Projects"
+    },
+    "cv": {
+        "name": "Adil",
+        "surname": "Akhmetov",
+        "age": 20,
+        "job": "Front-End Developer",
+        "emailValue": "devAdilAkhmetov@gmail.com",
+        "websiteValue": "alphakennybudy.github.io",
+        "mobileValue": "+ 7 700 996 40 89",
+        "email": "email",
+        "website": "website",
+        "mobile": "mobile",
+        "info": "Personal Info",
+        "workExp": "Work Experience",
+        "jobTitleAtCompany": "Front-End Developer (InternShip)",
+        "jobDate": "June 20 - Present",
+        "skills": "Key Skills",
+        "skillsValue": [
+            "Lying in the bed",
+            "Sleeping",
+            "Eating"
+        ],
+        "education": "Education",
+        "university": "Suleyman Demirel University",
+        "qualification": "Information Systems"
+    }
+}
