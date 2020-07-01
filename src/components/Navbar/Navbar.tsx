@@ -18,7 +18,7 @@ function Navbar() {
       <ul className="Navbar__list">
         <li>
           <Link className="Navbar__list__item" to="/">
-            <div id="headshot">
+            <div id="headshot" className="quickFade">
               <img
                 src="https://avatars2.githubusercontent.com/u/48881444?s=460&u=a2317274ce4b7c57e3c87e604e55595d65d02a2a&v=4"
                 alt="Logo"

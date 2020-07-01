@@ -4,7 +4,7 @@ import "./ProjectPage.css";
 
 function ProjectPage() {
   return (
-    <div className="ProjectPage">
+    <div className="ProjectPage instaFade">
       <h1 className="ProjectTitle">Task2 - Phone Book</h1>
       <iframe
         className="ProjectFrame"
