@@ -1,0 +1,9 @@
+.Navbar {
+  margin: 0 auto;
+  width: 50vw;
+  height: 10vh;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
