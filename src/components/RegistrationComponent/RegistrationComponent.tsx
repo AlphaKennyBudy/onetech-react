@@ -4,7 +4,7 @@ import { Formik, Form, Field } from "formik";
 import "./RegistrationComponent.css";
 
 import RegistrationSchema from "./RegistrationSchema";
-import register from "../../api/registerApi";
+import { register } from "../../services/auth.service";
 
 function RegistrationComponent() {
   return (

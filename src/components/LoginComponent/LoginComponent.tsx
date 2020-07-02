@@ -4,7 +4,7 @@ import { Formik, Form, Field } from "formik";
 import "./LoginComponent.css";
 
 import LoginSchema from "./LoginSchema";
-import login from "../../api/loginApi";
+import { login } from "../../services/auth.service";
 
 function LoginComponent() {
   return (
