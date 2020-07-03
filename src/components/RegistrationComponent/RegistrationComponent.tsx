@@ -3,7 +3,7 @@ import { Formik, Form, Field } from "formik";
 
 import "./RegistrationComponent.css";
 
-import RegistrationSchema from "./RegistrationSchema";
+import RegistrationSchema from "../../schemas/RegistrationSchema";
 import { register } from "../../services/auth.service";
 
 function RegistrationComponent() {
