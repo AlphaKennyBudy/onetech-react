@@ -1,5 +1,5 @@
 async function login(user: { username: string; password: string }) {
-  await fetch("https://reqres.in/api/login", {
+  return fetch("https://reqres.in/api/login", {
     method: "POST",
     body: JSON.stringify(user),
     headers: {
@@ -7,11 +7,11 @@ async function login(user: { username: string; password: string }) {
     },
   })
     .then((response) => response.json())
-    .then((json) => alert(JSON.stringify(json)));
+    .then((data) => (data.token ? data.token : data.error));
 }
 
 async function register(user: { username: string; password: string }) {
-  await fetch("https://reqres.in/api/register", {
+  return fetch("https://reqres.in/api/register", {
     method: "POST",
     body: JSON.stringify(user),
     headers: {
@@ -19,7 +19,7 @@ async function register(user: { username: string; password: string }) {
     },
   })
     .then((response) => response.json())
-    .then((json) => alert(JSON.stringify(json)));
+    .then((data) => (data.token ? data.token : data.error));
 }
 
 export { login, register };

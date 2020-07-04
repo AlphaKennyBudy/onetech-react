@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik, Form, Field } from "formik";
 
 import "./RegistrationComponent.css";
 
 import RegistrationSchema from "../../schemas/RegistrationSchema";
 import { register } from "../../services/auth.service";
+import UserContext from "../../contexts/UserContext";
 
 function RegistrationComponent() {
+  const { setToken } = useContext(UserContext)!;
   return (
     <div className="RegistrationComponent">
       <Formik
@@ -17,8 +19,8 @@ function RegistrationComponent() {
           password: "",
         }}
         validationSchema={RegistrationSchema}
-        onSubmit={(values) => {
-          register(values);
+        onSubmit={async (values) => {
+          await register(values).then((response) => setToken(response));
         }}
       >
         {({ errors, touched }) => (
