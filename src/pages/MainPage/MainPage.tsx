@@ -6,29 +6,28 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import "./MainPage.css";
-
-import LoginComponent from "../../components/LoginComponent/LoginComponent";
-import RegistrationComponent from "../../components/RegistrationComponent/RegistrationComponent";
+import Registration from "../../components/RegistrationComponent/Registration";
 import Navbar from "../../components/Navbar/Navbar";
 import UserContext from "../../contexts/UserContext";
+import { MainPageWrapper } from "./MainPageComponents";
+import Login from "../../components/Login/Login";
 
 function MainPage() {
   const [token, setToken] = useState("No token");
   return (
     <UserContext.Provider value={{ token, setToken }}>
       <Router>
-        <div className="MainPage">
+        <MainPageWrapper>
           <Navbar />
           <Switch>
             <Redirect from="/" exact to="/auth/login" />
-            <Route path="/auth/login" component={LoginComponent} />
+            <Route path="/auth/login" component={Login} />
             <Route
               path="/auth/registration"
-              component={RegistrationComponent}
+              component={Registration}
             />
           </Switch>
-        </div>
+        </MainPageWrapper>
       </Router>
     </UserContext.Provider>
   );

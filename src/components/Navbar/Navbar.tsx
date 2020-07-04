@@ -1,23 +1,29 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 
-import "./Navbar.css";
 import UserContext from "../../contexts/UserContext";
+import {
+  NavbarWrapper,
+  Logo,
+  NavbarList,
+  NavbarListItem,
+  NavbarLink,
+} from "./NavbarComponents";
 
 function Navbar() {
   const { token } = useContext(UserContext)!;
+
   return (
-    <div className="Navbar">
-      <ul className="Navbar__list">
-        <li>{token}</li>
-        <li>
-          <Link to="/auth/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/auth/registration">Registration</Link>
-        </li>
-      </ul>
-    </div>
+    <NavbarWrapper>
+      <Logo>{token}</Logo>
+      <NavbarList>
+        <NavbarListItem>
+          <NavbarLink to="/auth/login">Login</NavbarLink>
+        </NavbarListItem>
+        <NavbarListItem>
+          <NavbarLink to="/auth/registration">Registration</NavbarLink>
+        </NavbarListItem>
+      </NavbarList>
+    </NavbarWrapper>
   );
 }
 
