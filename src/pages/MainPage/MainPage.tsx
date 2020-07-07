@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Registration from "../../components/RegistrationComponent/Registration";
+import Registration from "../../components/Registration/Registration";
 import Navbar from "../../components/Navbar/Navbar";
 import UserContext from "../../contexts/UserContext";
 import { MainPageWrapper } from "./MainPageComponents";
@@ -22,10 +22,7 @@ function MainPage() {
           <Switch>
             <Redirect from="/" exact to="/auth/login" />
             <Route path="/auth/login" component={Login} />
-            <Route
-              path="/auth/registration"
-              component={Registration}
-            />
+            <Route path="/auth/registration" component={Registration} />
           </Switch>
         </MainPageWrapper>
       </Router>
