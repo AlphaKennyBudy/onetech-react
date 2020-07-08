@@ -1,5 +1,5 @@
 import React from "react";
-import { TaskType, TaskListType } from "../../actions/types";
+import { TaskType, TaskListType } from "../../types/types";
 import Task from "../Task/Task";
 
 function TaskList({ tasks, toggleTask }: TaskListType) {

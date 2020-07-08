@@ -1,7 +1,7 @@
 import { VisibilityFilters, toggleTask } from "../../actions";
 import { connect } from "react-redux";
 import TaskList from "../TaskList/TaskList";
-import { TaskType } from "../../actions/types";
+import { TaskType } from "../../types/types";
 import { Dispatch } from "redux";
 
 function filterTaskList(tasks: TaskType[], filter: string) {

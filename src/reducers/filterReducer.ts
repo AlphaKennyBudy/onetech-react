@@ -1,5 +1,5 @@
 import { VisibilityFilters } from "../actions";
-import { SET_VISIBILITY_FILTER } from "../actions/types";
+import { SET_VISIBILITY_FILTER } from "../types/types";
 
 const filterReducer = (
   state: string = VisibilityFilters.SHOW_ALL,

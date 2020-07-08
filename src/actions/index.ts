@@ -5,7 +5,7 @@ import {
   SHOW_ALL,
   SHOW_ACTIVE,
   SHOW_FINISHED,
-} from "./types";
+} from "../types/types";
 
 let id = 0;
 

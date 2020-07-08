@@ -1,7 +1,7 @@
 import React from "react";
 import FilterButton from "../FilterButton/FilterButton";
 import { useDispatch } from "react-redux";
-import { SHOW_ALL, SHOW_ACTIVE, SHOW_FINISHED } from "../../actions/types";
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_FINISHED } from "../../types/types";
 import { setVisibilityFilter } from "../../actions";
 
 function ControlTaskList() {

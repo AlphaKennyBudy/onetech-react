@@ -1,4 +1,4 @@
-import { ADD_TASK, TOGGLE_TASK, TaskType } from "../actions/types";
+import { ADD_TASK, TOGGLE_TASK, TaskType } from "../types/types";
 
 const taskReducer = (state: TaskType[] = [], action: any) => {
   switch (action.type) {

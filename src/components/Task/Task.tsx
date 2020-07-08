@@ -1,5 +1,5 @@
 import React from "react";
-import { FilteredTaskType } from "../../actions/types";
+import { FilteredTaskType } from "../../types/types";
 
 function Task({ onClick, completed, task }: FilteredTaskType) {
   return (
