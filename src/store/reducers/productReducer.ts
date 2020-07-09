@@ -1,4 +1,4 @@
-import { ProductType, ORDER_PRODUCT, CANCEL_PRODUCT } from "../types";
+import { ProductType, SET_PRODUCT_QUANTITY } from "../types";
 
 const products: ProductType[] = [
   {
@@ -21,18 +21,10 @@ const products: ProductType[] = [
 
 const productReducer = (state: ProductType[] = products, action: any) => {
   switch (action.type) {
-    case ORDER_PRODUCT:
+    case SET_PRODUCT_QUANTITY:
       return state.map((product: ProductType) =>
         product.id === action.id
-          ? { ...product, quantity: product.quantity + action.payload }
-          : product
-      );
-    case CANCEL_PRODUCT:
-      return state.map((product: ProductType) =>
-        product.id === action.id
-          ? product.quantity
-            ? { ...product, quantity: product.quantity - action.payload }
-            : product
+          ? { ...product, quantity: action.payload }
           : product
       );
     default:
@@ -41,3 +33,24 @@ const productReducer = (state: ProductType[] = products, action: any) => {
 };
 
 export default productReducer;
+
+// const productReducer = (state: ProductType[] = products, action: any) => {
+//   switch (action.type) {
+//     case ORDER_PRODUCT:
+//       return state.map((product: ProductType) =>
+//         product.id === action.id
+//           ? { ...product, quantity: product.quantity + action.payload }
+//           : product
+//       );
+//     case CANCEL_PRODUCT:
+//       return state.map((product: ProductType) =>
+//         product.id === action.id
+//           ? product.quantity
+//             ? { ...product, quantity: product.quantity - action.payload }
+//             : product
+//           : product
+//       );
+//     default:
+//       return state;
+//   }
+// };

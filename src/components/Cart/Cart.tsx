@@ -2,13 +2,20 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ProductType } from "../../store/types";
 import CartItem from "../CartItem/CartItem";
-import { cancelProduct, orderProduct } from "../../store/actions";
+import { setProductQuantity } from "../../store/actions";
 
 function Cart() {
   const state = useSelector(
     (state: { productReducer: ProductType[] }) => state.productReducer
   );
   const dispatch = useDispatch();
+
+  const calculateTotal = () => {
+    let total = state.reduce((prev, cur) => {
+      return prev + cur.quantity * cur.price;
+    }, 0);
+    return total ? total : 0;
+  };
   return (
     <table>
       <tr>
@@ -22,14 +29,21 @@ function Cart() {
         return product.quantity ? (
           <CartItem
             {...product}
-            onReduce={() => dispatch(cancelProduct(product.id))}
-            onIncrease={() => dispatch(orderProduct(product.id))}
-            onCancel={() =>
-              dispatch(cancelProduct(product.id, product.quantity))
+            onChange={(payload: number) =>
+              dispatch(setProductQuantity(product.id, payload))
             }
+            onCancel={() => dispatch(setProductQuantity(product.id))}
           />
         ) : null;
       })}
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{calculateTotal()}</td>
+      </tr>
     </table>
   );
 }
