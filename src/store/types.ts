@@ -9,3 +9,7 @@ export type ProductType = {
   image: string;
   quantity: number;
 };
+
+export type DispatchedProductType = ProductType & {
+  onClick: () => void;
+};

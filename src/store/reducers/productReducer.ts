@@ -22,17 +22,19 @@ const products: ProductType[] = [
 const productReducer = (state: ProductType[] = products, action: any) => {
   switch (action.type) {
     case ORDER_PRODUCT:
-      return state.map((product: ProductType) => {
-        if (product.id === action.id) {
-          product.quantity++;
-        }
-      });
+      return state.map((product: ProductType) =>
+        product.id === action.id
+          ? { ...product, quantity: product.quantity + action.payload }
+          : product
+      );
     case CANCEL_PRODUCT:
-      return state.map((product: ProductType) => {
-        if (product.id === action.id) {
-          product.quantity ? product.quantity : product.quantity--;
-        }
-      });
+      return state.map((product: ProductType) =>
+        product.id === action.id
+          ? product.quantity
+            ? { ...product, quantity: product.quantity - action.payload }
+            : product
+          : product
+      );
     default:
       return state;
   }
