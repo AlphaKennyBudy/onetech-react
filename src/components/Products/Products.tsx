@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ProductType } from "../../store/types";
 import Product from "../Product/Product";
-import { setProductQuantity } from "../../store/actions";
+import { setProductQuantity, setProductOrdered } from "../../store/actions";
 
 function Products() {
   const state = useSelector(
@@ -16,6 +16,7 @@ function Products() {
           <Product
             {...product}
             onClick={() => {
+              dispatch(setProductOrdered(product.id, true));
               dispatch(setProductQuantity(product.id, product.quantity + 1));
             }}
           />

@@ -1,4 +1,4 @@
-import { ProductType, SET_PRODUCT_QUANTITY } from "../types";
+import { ProductType, SET_PRODUCT_QUANTITY, PRODUCT_ORDERED } from "../types";
 
 const products: ProductType[] = [
   {
@@ -8,6 +8,7 @@ const products: ProductType[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5FpRKXeVbKWa1Wo75eOMva5FrE7QCREZgJj8iWNRZf9me2BcCRg",
     quantity: 0,
+    ordered: false,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const products: ProductType[] = [
     image:
       "http://st.motortrend.com/uploads/sites/5/2016/03/2016-Tesla-Model-X-P90D-front-three-quarter-doors-open.jpg",
     quantity: 0,
+    ordered: false,
   },
 ];
 
@@ -27,30 +29,15 @@ const productReducer = (state: ProductType[] = products, action: any) => {
           ? { ...product, quantity: action.payload }
           : product
       );
+    case PRODUCT_ORDERED:
+      return state.map((product: ProductType) =>
+        product.id === action.id
+          ? { ...product, ordered: action.status }
+          : product
+      );
     default:
       return state;
   }
 };
 
 export default productReducer;
-
-// const productReducer = (state: ProductType[] = products, action: any) => {
-//   switch (action.type) {
-//     case ORDER_PRODUCT:
-//       return state.map((product: ProductType) =>
-//         product.id === action.id
-//           ? { ...product, quantity: product.quantity + action.payload }
-//           : product
-//       );
-//     case CANCEL_PRODUCT:
-//       return state.map((product: ProductType) =>
-//         product.id === action.id
-//           ? product.quantity
-//             ? { ...product, quantity: product.quantity - action.payload }
-//             : product
-//           : product
-//       );
-//     default:
-//       return state;
-//   }
-// };

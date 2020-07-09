@@ -1,50 +1,51 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ProductType } from "../../store/types";
-import CartItem from "../CartItem/CartItem";
-import { setProductQuantity } from "../../store/actions";
+import { calculateTotal } from "../../utils/calculateTotal";
+import { Table, InputNumber, Button } from "antd";
+import Column from "antd/lib/table/Column";
+import { filterableCart } from "../../utils/filterableCart";
 
 function Cart() {
   const state = useSelector(
     (state: { productReducer: ProductType[] }) => state.productReducer
   );
   const dispatch = useDispatch();
-
-  const calculateTotal = () => {
-    let total = state.reduce((prev, cur) => {
-      return prev + cur.quantity * cur.price;
-    }, 0);
-    return total ? total : 0;
-  };
+  const filteredCard = filterableCart(state, dispatch);
   return (
-    <table>
-      <tr>
-        <td>Item</td>
-        <td>Price</td>
-        <td>Quantity</td>
-        <td>Total Price</td>
-        <td></td>
-      </tr>
-      {state.map((product: ProductType) => {
-        return product.quantity ? (
-          <CartItem
-            {...product}
-            onChange={(payload: number) =>
-              dispatch(setProductQuantity(product.id, payload))
-            }
-            onCancel={() => dispatch(setProductQuantity(product.id))}
+    <Table
+      dataSource={filteredCard}
+      locale={{
+        filterConfirm: "Ok",
+        filterReset: "Reset",
+        emptyText: "No Orders",
+      }}
+      title={() => <h1>Cart</h1>}
+      footer={() => (
+        <h3 style={{ float: "right" }}>Total {calculateTotal(state)}</h3>
+      )}
+    >
+      <Column title="Item" dataIndex="name" key="name" />
+      <Column title="Price" dataIndex="price" key="price" />
+      <Column
+        title="Quantity"
+        key="quantity"
+        render={({ quantity, onChange }) => (
+          <InputNumber
+            type="number"
+            onChange={onChange}
+            value={quantity}
+            min={0}
           />
-        ) : null;
-      })}
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>{calculateTotal()}</td>
-      </tr>
-    </table>
+        )}
+      />
+      <Column title="Total Price" dataIndex="total" key="total" />
+      <Column
+        dataIndex="onCancel"
+        key="cancel"
+        render={(onCancel) => <Button onClick={onCancel}>Delete</Button>}
+      />
+    </Table>
   );
 }
 
