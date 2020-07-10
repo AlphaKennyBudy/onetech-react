@@ -6,11 +6,11 @@ import Meta from "antd/lib/card/Meta";
 function Product({ name, price, image, onClick }: DispatchedProductType) {
   return (
     <Card
-      title={name}
+      title={<h3>{price} USD</h3>}
       extra={<Button onClick={onClick}>Add to Cart</Button>}
-      cover={<img src={image} />}
+      cover={<img src={image} alt="" />}
     >
-      <Meta title={<h3>Price {price} USD</h3>} />
+      <Meta title={<h4>{name}</h4>} />
     </Card>
   );
 }

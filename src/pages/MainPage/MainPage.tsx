@@ -1,14 +1,23 @@
-import React from "react";
-import { Provider } from "react-redux";
-import store from "../../store/store";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Products from "../../components/Products/Products";
 import Cart from "../../components/Cart/Cart";
 import { Row, Col } from "antd";
 import "antd/dist/antd.css";
+import getFood from "../../services/auth.service";
+import { fetchProducts } from "../../store/actions";
 
 function MainPage() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    async function fetchData() {
+      const products = await getFood();
+      dispatch(fetchProducts(products));
+    }
+    fetchData();
+  }, []);
   return (
-    <Provider store={store}>
+    <>
       <Row justify="space-around" align="middle">
         <Col span={20}>
           <Cart />
@@ -19,7 +28,7 @@ function MainPage() {
           <Products />
         </Col>
       </Row>
-    </Provider>
+    </>
   );
 }
 

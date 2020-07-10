@@ -1,4 +1,9 @@
-import { ProductType, SET_PRODUCT_QUANTITY, PRODUCT_ORDERED } from "../types";
+import {
+  ProductType,
+  SET_PRODUCT_QUANTITY,
+  PRODUCT_ORDERED,
+  FETCH_PRODUCTS,
+} from "../types";
 import { products } from "../products";
 
 const productReducer = (state: ProductType[] = products, action: any) => {
@@ -15,6 +20,8 @@ const productReducer = (state: ProductType[] = products, action: any) => {
           ? { ...product, ordered: action.status }
           : product
       );
+    case FETCH_PRODUCTS:
+      return action.products;
     default:
       return state;
   }

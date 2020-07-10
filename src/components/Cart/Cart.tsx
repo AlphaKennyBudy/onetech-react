@@ -15,6 +15,7 @@ function Cart() {
   return (
     <Table
       dataSource={filteredCart}
+      pagination={{ pageSize: 5 }}
       locale={{
         filterConfirm: "Ok",
         filterReset: "Reset",

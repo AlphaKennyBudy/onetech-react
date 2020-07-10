@@ -1,5 +1,6 @@
 export const SET_PRODUCT_QUANTITY = "SET_PRODUCT_QUANTITY";
 export const PRODUCT_ORDERED = "PRODUCT_ORDERED";
+export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 
 export type ProductType = {
   id: number;
