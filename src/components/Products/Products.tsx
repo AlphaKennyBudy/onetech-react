@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { ProductType } from "../../store/types";
 import Product from "../Product/Product";
 import { setProductQuantity, setProductOrdered } from "../../store/actions";
+import { List } from "antd";
 
 function Products() {
   const state = useSelector(
@@ -10,9 +11,11 @@ function Products() {
   );
   const dispatch = useDispatch();
   return (
-    <ul>
-      {state.map((product: ProductType) => {
-        return (
+    <List
+      grid={{ gutter: 16, column: 4 }}
+      dataSource={state}
+      renderItem={(product: ProductType) => (
+        <List.Item>
           <Product
             {...product}
             onClick={() => {
@@ -20,9 +23,9 @@ function Products() {
               dispatch(setProductQuantity(product.id, product.quantity + 1));
             }}
           />
-        );
-      })}
-    </ul>
+        </List.Item>
+      )}
+    />
   );
 }
 

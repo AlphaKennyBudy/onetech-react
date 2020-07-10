@@ -9,15 +9,13 @@ import "antd/dist/antd.css";
 function MainPage() {
   return (
     <Provider store={store}>
-      <Row>
-        <Col span={2} />
+      <Row justify="space-around" align="middle">
         <Col span={20}>
           <Cart />
         </Col>
-        <Col span={2} />
       </Row>
-      <Row>
-        <Col span={24}>
+      <Row justify="space-around" align="middle">
+        <Col span={20}>
           <Products />
         </Col>
       </Row>

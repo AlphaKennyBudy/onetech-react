@@ -11,10 +11,10 @@ function Cart() {
     (state: { productReducer: ProductType[] }) => state.productReducer
   );
   const dispatch = useDispatch();
-  const filteredCard = filterableCart(state, dispatch);
+  const filteredCart = filterableCart(state, dispatch);
   return (
     <Table
-      dataSource={filteredCard}
+      dataSource={filteredCart}
       locale={{
         filterConfirm: "Ok",
         filterReset: "Reset",

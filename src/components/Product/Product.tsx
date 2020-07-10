@@ -1,16 +1,17 @@
 import React from "react";
 import { DispatchedProductType } from "../../store/types";
+import { Card, Button } from "antd";
+import Meta from "antd/lib/card/Meta";
 
 function Product({ name, price, image, onClick }: DispatchedProductType) {
   return (
-    <ul>
-      <div>
-        <img src={image} />
-        <h1>{name}</h1>
-        <p>{price}</p>
-        <button onClick={onClick}>Add to Cart</button>
-      </div>
-    </ul>
+    <Card
+      title={name}
+      extra={<Button onClick={onClick}>Add to Cart</Button>}
+      cover={<img src={image} />}
+    >
+      <Meta title={price} />
+    </Card>
   );
 }
 
