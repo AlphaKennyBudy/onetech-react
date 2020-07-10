@@ -12,6 +12,7 @@ function Products() {
   const dispatch = useDispatch();
   return (
     <List
+      header={<h1>Products</h1>}
       grid={{ gutter: 16, column: 4 }}
       dataSource={state}
       renderItem={(product: ProductType) => (

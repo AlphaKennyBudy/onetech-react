@@ -10,7 +10,7 @@ function Product({ name, price, image, onClick }: DispatchedProductType) {
       extra={<Button onClick={onClick}>Add to Cart</Button>}
       cover={<img src={image} />}
     >
-      <Meta title={price} />
+      <Meta title={<h3>Price {price} USD</h3>} />
     </Card>
   );
 }
