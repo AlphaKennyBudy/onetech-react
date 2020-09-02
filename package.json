@@ -9,12 +9,17 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.41",
+    "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+<<<<<<< snyk-upgrade-4a114566241a94fa2569aae4fe857135
     "react-scripts": "3.4.2",
     "typescript": "~3.7.2"
+=======
+    "react-scripts": "3.4.1",
+    "typescript": "~3.9.7"
+>>>>>>> master
   },
   "scripts": {
     "start": "react-scripts start",
